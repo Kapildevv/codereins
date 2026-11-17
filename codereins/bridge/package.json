@@ -1,0 +1,39 @@
+{
+  "name": "codereins-bridge",
+  "displayName": "CodeReins Bridge",
+  "description": "Local, token-protected control channel that lets the codereins command drive this window.",
+  "version": "0.1.0",
+  "publisher": "local",
+  "license": "Apache-2.0",
+  "engines": { "vscode": "^1.93.0" },
+  "categories": ["Other"],
+  "main": "./extension.js",
+  "activationEvents": ["onStartupFinished"],
+  "extensionKind": ["ui", "workspace"],
+  "capabilities": {
+    "untrustedWorkspaces": { "supported": true },
+    "virtualWorkspaces": true
+  },
+  "contributes": {
+    "commands": [
+      { "command": "codereinsBridge.showStatus", "title": "CodeReins Bridge: Show Status" }
+    ],
+    "configuration": {
+      "title": "CodeReins Bridge",
+      "properties": {
+        "codereinsBridge.enabled": {
+          "type": "boolean",
+          "default": true,
+          "scope": "application",
+          "description": "Start the local control channel in every window. Turn off to stop codereins from driving VS Code."
+        },
+        "codereinsBridge.allowEval": {
+          "type": "boolean",
+          "default": false,
+          "scope": "application",
+          "description": "Allow `codereins bridge eval` to run arbitrary JavaScript against the extension API. User settings only; a workspace cannot turn this on."
+        }
+      }
+    }
+  }
+}

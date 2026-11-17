@@ -1,0 +1,15 @@
+codereins
+Copyright 2026 Kapildevv
+
+This product includes software from the CLI-Anything project
+(https://github.com/HKUDS/CLI-Anything), Copyright HKUDS CLI-Anything Team,
+licensed under the Apache License, Version 2.0:
+
+  codereins/utils/repl_skin.py  (from cli-anything-plugin/repl_skin.py, modified;
+                                 the changes are listed at the top of the file)
+
+codereins was built following CLI-Anything's harness method. It is an independent
+project, not made or endorsed by the CLI-Anything authors.
+
+"Visual Studio Code" and "VS Code" are trademarks of Microsoft Corporation.
+codereins is not made or endorsed by Microsoft.
